@@ -197,7 +197,29 @@ body {
     justify-content: center;
     padding-top: 4rem;
   }
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:'a b c'
+                        'd e f';
+    grid-area: 'hexagon-1 hexagon-2 hexagon-3'
+                'hexagon-4 hexagon-5 hexagon-6';                 
+  }
 
+  .hexagon-1,.hexagon-2,.hexagon-3,.hexagon-4,.hexagon-5,.hexagon-6 {
+    width: 100px; /* adjust the width to your liking *
+    height: 86.6px; /* calculate the height based on the width (86.6% of width) */
+    background-color: #ffffff; /* adjust the background color to your liking */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  
+  .hexagon-inner {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    background-color: #e7630b; /* adjust the background color to your liking */
+  }
+  
   
   
   
